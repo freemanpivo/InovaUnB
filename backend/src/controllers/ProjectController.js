@@ -34,7 +34,29 @@ module.exports = {
   },
 
   async list(request, response) {
-    const projects = await connection('projects').select();
-    return response.json(projects);
+    const searchQuery = request.query.q.replace('+', ' ');
+
+    // console.log(searchQuery);
+
+    if (!searchQuery) {
+      const projects = await connection('projects').select();
+      return response.json(projects);
+    }
+
+    const results = await esclient.search({
+      index: 'inovaunb',
+      type: 'projects',
+      body: {
+        query: {
+          multi_match: {
+            query: searchQuery,
+            fields: ['title', 'description'],
+            fuzziness: 'auto'
+          }
+        }
+      }
+    });
+
+    return response.json(results);
   }
 };

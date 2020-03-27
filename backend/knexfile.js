@@ -5,9 +5,9 @@ module.exports = {
       filename: './src/database/db.sqlite'
     },
     migrations: {
-      directory: './src/database/migrations',
-      useNullAsDefault: true
-    }
+      directory: './src/database/migrations'
+    },
+    useNullAsDefault: true
   },
 
   staging: {

@@ -19,7 +19,7 @@ A extração consiste em percorrer o arquivo .dat selecionando a palavra raiz e 
 Para manter seu SO com pacotes de Python padrão e sem pacotes extras não utilizados, criaremos um ambiente para desenvolvimento virtual onde serão instalados os pacotes necessários somente para aplicação de conversão.
 
 ```shell
-python3 -m venv nomeEnvironment
+python3 -m venv env
 ```
 
 Isso criará uma pasta no local que o seu terminal estiver apontando. Você pode criar este ambiente onde quiser, lembrando que para executar o script você deverá apontar e ativar este ambiente para que ele execute com as dependências corretamente.

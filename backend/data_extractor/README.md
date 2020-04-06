@@ -24,6 +24,12 @@ python3 -m venv env
 
 Isso criará uma pasta no local que o seu terminal estiver apontando. Você pode criar este ambiente onde quiser, lembrando que para executar o script você deverá apontar e ativar este ambiente para que ele execute com as dependências corretamente.
 
+- Ative seu virtualenv
+
+```
+source path/to/myvenv/bin/activate
+```
+
 ### Instalação dos pacotes no virtualenv
 
 ```shell
@@ -31,12 +37,6 @@ pip install -r requirements.txt
 ```
 
 ## Execução
-
-- Ative seu virtualenv
-
-```
-source path/to/myvenv/bin/activate
-```
 
 - Execute o script
 
